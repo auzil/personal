@@ -1,0 +1,531 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+html {
+  --background-color: #f0f0f0;
+  --button-color: #007bff;
+  --button-border-color: #007bff;
+  /*
+  Primary Colors:
+  Midnight Blue - #2C3E50
+  Deep and professional, great for backgrounds or text.
+  Aqua Blue - #1ABC9C
+  Fresh and vibrant, ideal for buttons, accents, or highlights.
+  Secondary Colors:
+  Coral Red - #E74C3C
+  Warm and inviting, perfect for call-to-action elements.
+  Soft Orange - #F39C12
+  Energetic and eye-catching, great for secondary buttons or icons.
+  Neutral Colors:
+  Light Gray - #ECF0F1
+  Clean and subtle, excellent for backgrounds or dividers.
+  Dark Gray - #7F8C8D
+  Balances out the brighter colors, useful for text or secondary elements.
+  Accent Colors:
+  Soft Pink - #FFC0CB
+  A soft, subtle accent that can be used for highlights or decorative elements.
+  Lime Green - #A3E4D7
+  Adds a fresh, modern touch, great for small details or hover effects.
+  */
+  --primary-color: #2C3E50;
+  --secondary-color: #E74C3C;
+  --accent-color: #FFC0CB;
+  --text-color: #333;
+  --text-light-color: #fff;
+  --text-dark-color: #000;
+  --hero-overlay: rgba(160, 204, 214, 0.5)
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --link-visited-color: #721c24;
+  --link-active-color: #0056b3;
+  --link-decoration: none;
+  --link-hover-decoration: underline;
+  --link-visited-decoration: underline;
+  --link-active-decoration: underline;
+  --link-transition: color 0.3s ease-in-out;
+  --link-hover-transition: color 0.3s ease-in-out;
+}
+
+.trans {
+  transform: translate3d(-8px, -8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+.trans:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1.05) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transition: transform 0.3s;
+}
+
+.animateView {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+.animateView.animateViewActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animateView.animateViewFadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.animateView.animateViewFadeInUp.animateViewActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animateImage {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+.animateImage.animateImageActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+.animateImage.animateImageFadeInRight {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.animateImage.animateImageFadeInRight.animateImageActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-light-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn.btn-contact {
+  width: 20vw;
+  min-width: 200px;
+}
+.btn:hover {
+  box-shadow: 0 0 10px rgba(109, 223, 249, 0.8);
+}
+
+html {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .icon {
+  display: none;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+nav .logo {
+  font-size: 2rem;
+  font-weight: 800;
+}
+nav .logo a {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+nav .sidebar {
+  padding-top: 1rem;
+  display: none;
+  top: 0;
+  right: 0;
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+nav .sidebar.active {
+  display: flex;
+}
+nav .sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  width: 100%;
+}
+nav .sidebar ul li {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+nav .sidebar ul li:first-child {
+  align-self: flex-end; /* Moves the first item to the right */
+  margin-right: 0; /* Ensure it's fully to the right corner */
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+nav .sidebar ul li img {
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+nav ul li {
+  display: block;
+  margin-right: 1rem;
+}
+nav ul li a {
+  height: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+nav a {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  nav .icon {
+    display: inline-block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+.hero-section {
+  height: 800px;
+  width: 100%;
+  background-image: url("../images/hero.bg3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  min-width: 600px;
+  height: 800px;
+  background: rgba(160, 204, 214, 0.8); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2; /* Bring content above the overlay */
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 40vw;
+  min-width: 600px;
+  height: 800px;
+  padding: 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+}
+.hero-content h1 {
+  width: 30vw;
+  min-width: 400px;
+  font-size: 3rem;
+  color: white;
+}
+.hero-content p {
+  width: 30vw;
+  min-width: 400px;
+  font-size: 2rem;
+  color: white;
+  font-weight: 800;
+}
+.hero-content p:nth-child(2) {
+  font-weight: 600;
+  color: var(--text-dark-color);
+}
+
+.hero-actions {
+  padding-top: 5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me {
+  max-width: 810px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 3rem auto;
+}
+.about-me .about-me-content {
+  display: flex;
+  gap: 2rem;
+  align-items: space-between;
+  justify-content: center;
+}
+.about-me .about-me-content .about-me-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 3rem;
+}
+.about-me .about-me-content .about-me-description p {
+  min-width: 300px;
+}
+.about-me .about-me-image img {
+  border-radius: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .about-me .about-me-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-me .about-me-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.skills {
+  max-width: 1440px;
+  width: 80vw;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 3rem auto;
+}
+.skills .skills-header {
+  width: 100%;
+}
+.skills .skills-header h1 {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.skills .skills-header h1::before, .skills .skills-header h1::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: auto;
+}
+.skills .skills-header h1::before {
+  margin-right: 2rem;
+}
+.skills .skills-header h1::after {
+  margin-left: 2rem;
+}
+.skills .skills-header h1 span {
+  display: inline-block;
+}
+.skills .skills-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-content .skills-column1 {
+  flex: 1;
+}
+.skills .skills-content .skills-column2 {
+  flex: 1;
+  margin-top: 4rem;
+}
+.skills .skills-content_wrapper {
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.skills .skills-content ul {
+  margin-top: 2rem;
+}
+.skills .skills-content ul li {
+  transform: translate(11px, 11px);
+  background-color: black;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  border: solid 1px var(--primary-color);
+}
+.skills .skills-content ul li:hover img {
+  transform: rotate(360deg) scale(1.2);
+}
+@media screen and (max-width: 768px) {
+  .skills .skills-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .skills .skills-content .skills-column1 {
+    margin-top: 4rem;
+  }
+  .skills .skills-content .skills-column2 {
+    margin-top: 0rem;
+  }
+  .skills .skills-content .skills-column2 ul {
+    margin-top: 0rem;
+  }
+}
+.skills .skill-icon {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skill-icon img {
+  transition: transform 0.3s ease-in-out;
+  height: 3rem;
+}
+
+section.contact {
+  max-width: 1440px;
+  width: 80vw;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 3rem auto;
+}
+section.contact .contact-header {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+section.contact .contact-header::before, section.contact .contact-header::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: auto;
+}
+section.contact .contact-header::before {
+  margin-right: 2rem;
+}
+section.contact .contact-header::after {
+  margin-left: 2rem;
+}
+section.contact .contact-header span {
+  display: inline-block;
+}
+section.contact .contact-content {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+section.contact .contact-content form {
+  padding: 2rem;
+  border: solid 1px var(--primary-color);
+  border-radius: 0.5rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 500px;
+  max-width: 600px;
+}
+section.contact .contact-content form .form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+section.contact .contact-content form .form-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  min-width: 100px;
+}
+section.contact .contact-content form .form-group input, section.contact .contact-content form .form-group textarea {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+/*# sourceMappingURL=main.css.map */

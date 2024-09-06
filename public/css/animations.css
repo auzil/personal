@@ -1,0 +1,48 @@
+.trans {
+  transform: translate3d(-8px, -8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+.trans:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1.05) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transition: transform 0.3s;
+}
+
+.animateView {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+.animateView.animateViewActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animateView.animateViewFadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.animateView.animateViewFadeInUp.animateViewActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animateImage {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+.animateImage.animateImageActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+.animateImage.animateImageFadeInRight {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.animateImage.animateImageFadeInRight.animateImageActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*# sourceMappingURL=animations.css.map */

@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-light-color);
+    background-color: var(--primary-color);
+    // border: 2px solid var(--button-border-color);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.btn-contact {
+        width: 20vw;
+        min-width: 200px;
+    }
+
+    &:hover {
+       // box shadow
+         box-shadow: 0 0 10px rgba(109, 223, 249, 0.8);
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/main.css">
+    <script src="public/js/main.js" defer></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="logo">
+                <a href="index.php">Viktar Pryshchepa</a>
+            </div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><img src="public/icons/close.svg" /></a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="showSidebar()">
+                <img src="public/icons/menu.svg" alt="menu">
+            </a>
+        </nav>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Hello, I'm Viktar, a Creative Web Developer.</h1>
+                <p>I design and build beautiful, functional websites that captivate and convert.</p>
+                <div class="hero-actions">
+                    <input class="btn btn-contact" type="button" value="Contact me">
+                    <!-- <a href="index.php?page=contact">Learn more</a> -->
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-me">
+            <div class="about-me-content">
+                    <div class="about-me-image animateImage">
+                        <img src="public/images/about-image.png" alt="Viktar">
+                    </div>
+                    <div class="about-me-description animateView">
+                        <p>
+                            I'm a web designer and developer based in Prague, Czech Republic. I have a passion for web design and love to create for web and mobile devices.
+                        </p>
+                        <p>
+                            I have a strong foundation in web design and development, and I am always learning new technologies and techniques to keep up with the ever-evolving web landscape.
+                        </p>
+                    </div>
+            
+            </div>
+        </section>
+
+        <section id="skills" class="skills animateView">
+            <div class="skills-header">
+                <h1><span>Skills</span></h1>
+            </div>
+            <div class="skills-content">
+                <div class="skills-column1">
+                    <ul>
+                        <li>
+                            <div class="skills-content_wrapper trans">
+                                <div class="skill-icon">
+                                    <img src="public/icons/html.svg" alt="HTML">
+                                </div>
+                                <div class="skill-description">
+                                    The foundation of web development, HTML structures the content of a webpage, defining elements like headings, paragraphs, links, and images. It's the essential language that forms the building blocks of all websites, enabling browsers to display and interact with text, media, and forms in a structured, user-friendly way
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skills-content_wrapper trans">
+                                <div class="skill-icon">
+                                    <img src="public/icons/responsive.svg" alt="HTML">
+                                </div>
+                                <div class="skill-description">
+                                    A web design approach that ensures websites look and function seamlessly on any device, from desktops to smartphones. By using flexible layouts, media queries, and scalable images, responsive design adapts content to different screen sizes, providing an optimal user experience across all devices
+                                </div>
+                             </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills-column2">
+                    <ul>
+                        <li>
+                            <div class="skills-content_wrapper trans">
+                                <div class="skill-icon">
+                                    <img src="public/icons/javascript.svg" alt="HTML">
+                                </div>
+                                <div class="skill-description">
+                                    A versatile programming language that brings interactivity and dynamic content to websites. JavaScript enables features like animations, form validation, and real-time updates, making web pages more engaging and responsive to user actions. It's an essential tool for creating modern, interactive web experiences
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skills-content_wrapper trans">
+                                <div class="skill-icon">
+                                    <img src="public/icons/html.svg" alt="HTML">
+                                </div>
+                                <div class="skill-description">
+                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact animateView">
+            <div class="contact-header">
+                <h1><span>Contact Me</span></h1>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form action="index.php?page=contact" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+                
+    </main>
+
+    <script src="public/js/transition.js"></script>
+</body>
+</html>

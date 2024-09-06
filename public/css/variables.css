@@ -1,0 +1,46 @@
+html {
+  --background-color: #f0f0f0;
+  --button-color: #007bff;
+  --button-border-color: #007bff;
+  /*
+  Primary Colors:
+  Midnight Blue - #2C3E50
+  Deep and professional, great for backgrounds or text.
+  Aqua Blue - #1ABC9C
+  Fresh and vibrant, ideal for buttons, accents, or highlights.
+  Secondary Colors:
+  Coral Red - #E74C3C
+  Warm and inviting, perfect for call-to-action elements.
+  Soft Orange - #F39C12
+  Energetic and eye-catching, great for secondary buttons or icons.
+  Neutral Colors:
+  Light Gray - #ECF0F1
+  Clean and subtle, excellent for backgrounds or dividers.
+  Dark Gray - #7F8C8D
+  Balances out the brighter colors, useful for text or secondary elements.
+  Accent Colors:
+  Soft Pink - #FFC0CB
+  A soft, subtle accent that can be used for highlights or decorative elements.
+  Lime Green - #A3E4D7
+  Adds a fresh, modern touch, great for small details or hover effects.
+  */
+  --primary-color: #2C3E50;
+  --secondary-color: #E74C3C;
+  --accent-color: #FFC0CB;
+  --text-color: #333;
+  --text-light-color: #fff;
+  --text-dark-color: #000;
+  --hero-overlay: rgba(160, 204, 214, 0.5)
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --link-visited-color: #721c24;
+  --link-active-color: #0056b3;
+  --link-decoration: none;
+  --link-hover-decoration: underline;
+  --link-visited-decoration: underline;
+  --link-active-decoration: underline;
+  --link-transition: color 0.3s ease-in-out;
+  --link-hover-transition: color 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=variables.css.map */
