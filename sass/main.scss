@@ -131,7 +131,7 @@ nav {
     }
 
     //add responsive
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
         .icon {
             display: inline-block;
         }
@@ -247,7 +247,7 @@ nav {
 
 
     // responsive
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
         .about-me-content {
             flex-direction: column;
             gap: 1rem;
@@ -340,7 +340,7 @@ nav {
         }
 
         // responsive
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 480px) {
             flex-direction: column;
             gap: 1rem;
             .skills-column1 {
